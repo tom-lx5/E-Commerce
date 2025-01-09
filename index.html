@@ -18,7 +18,7 @@
         <button>Rechercher</button>
       </div>
       <div class="cart">
-        <a href="#" id="view-cart">🛒 Panier (<span id="cart-count">0</span>)</a>
+        <a href="#" id="open-cart">🛒 Panier (0)</a>
       </div>
     </div>
   </header>
@@ -48,36 +48,54 @@
     <section class="products">
       <h2>Produits Populaires</h2>
       <div class="product-grid">
-        <div class="product" data-name="Produit 1" data-price="20">
+        <!-- Produit 1 -->
+        <div class="product">
           <img src="https://via.placeholder.com/150" alt="Produit 1">
           <h3>Produit 1</h3>
           <p>Prix : 20 €</p>
-          <button class="add-to-cart">Ajouter au panier</button>
+          <button class="add-to-cart" data-name="Produit 1" data-price="20">Ajouter au panier</button>
         </div>
-        <div class="product" data-name="Produit 2" data-price="35">
+        <!-- Produit 2 -->
+        <div class="product">
           <img src="https://via.placeholder.com/150" alt="Produit 2">
           <h3>Produit 2</h3>
           <p>Prix : 35 €</p>
-          <button class="add-to-cart">Ajouter au panier</button>
+          <button class="add-to-cart" data-name="Produit 2" data-price="35">Ajouter au panier</button>
         </div>
-        <div class="product" data-name="Produit 3" data-price="50">
+        <!-- Produit 3 -->
+        <div class="product">
           <img src="https://via.placeholder.com/150" alt="Produit 3">
           <h3>Produit 3</h3>
           <p>Prix : 50 €</p>
-          <button class="add-to-cart">Ajouter au panier</button>
+          <button class="add-to-cart" data-name="Produit 3" data-price="50">Ajouter au panier</button>
         </div>
-        <div class="product" data-name="Produit 4" data-price="75">
+        <!-- Produit 4 -->
+        <div class="product">
           <img src="https://via.placeholder.com/150" alt="Produit 4">
           <h3>Produit 4</h3>
           <p>Prix : 75 €</p>
-          <button class="add-to-cart">Ajouter au panier</button>
+          <button class="add-to-cart" data-name="Produit 4" data-price="75">Ajouter au panier</button>
         </div>
       </div>
+    </section>
+
+    <!-- Section Contactez-nous -->
+    <section id="contact-section" class="contact">
+      <h2>Contactez-nous</h2>
+      <form action="mailto:tomlux54@gmail.com" method="post" enctype="text/plain">
+        <label for="name">Nom :</label><br>
+        <input type="text" id="name" name="name" placeholder="Votre nom" required><br><br>
+        <label for="email">E-mail :</label><br>
+        <input type="email" id="email" name="email" placeholder="Votre adresse email" required><br><br>
+        <label for="message">Message :</label><br>
+        <textarea id="message" name="message" placeholder="Votre message" rows="5" required></textarea><br><br>
+        <button type="submit">Envoyer</button>
+      </form>
     </section>
   </main>
 
   <!-- Interface du panier -->
-  <section id="cart-section" class="hidden">
+  <section id="cart-section">
     <h2>Votre Panier</h2>
     <div id="cart-items"></div>
     <button id="pay-button">Payer</button>
@@ -91,6 +109,7 @@
     </div>
   </footer>
 
+  <!-- Script JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
