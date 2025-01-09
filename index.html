@@ -29,7 +29,7 @@
             <li><a href="#">Accueil</a></li>
             <li><a href="#">Catégories</a></li>
             <li><a href="#">Promotions</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#contact-section">Contact</a></li>
         </ul>
     </nav>
 
@@ -45,7 +45,7 @@
             </div>
         </section>
 
-    <section class="products">
+        <section class="products">
             <h2>Produits Populaires</h2>
             <div class="product-grid">
                 <div class="product">
@@ -76,6 +76,23 @@
                     <button>Ajouter au panier</button>
                 </div>
             </div>
+        </section>
+
+        <!-- Section Contact -->
+        <section id="contact-section" class="contact">
+            <h2>Contactez-nous</h2>
+            <form action="mailto:tomlux54@gmail.com" method="post" enctype="text/plain">
+                <label for="name">Nom :</label><br>
+                <input type="text" id="name" name="name" placeholder="Votre nom" required><br><br>
+
+                <label for="email">Email :</label><br>
+                <input type="email" id="email" name="email" placeholder="Votre adresse email" required><br><br>
+
+                <label for="message">Message :</label><br>
+                <textarea id="message" name="message" placeholder="Votre message" rows="5" required></textarea><br><br>
+
+                <button type="submit">Envoyer</button>
+            </form>
         </section>
     </main>
 
